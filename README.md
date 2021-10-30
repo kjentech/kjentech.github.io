@@ -4,4 +4,6 @@ This is my first GitHub Pages repo.
 ## Heading 2
 I will put stuff up here.
 
-[ADC Customization](ADC Customization.md)
+Markdown link: [ADC Customization](ADC Customization.md)
+
+Wikilink: [[ADC Customization]]
