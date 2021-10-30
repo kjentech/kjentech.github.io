@@ -117,23 +117,25 @@ Any JavaScript is to be placed in this file. As you can access the DOM, you coul
 -   We define our code for WHEN the Caps Lock warning should show on the .customAuthTop div.
 
 **script.js:**
-`$('.customAuthBottom').html('<p class="_ctxstxt_sspr"></p>');`
-`$('.customAuthFooter').html('<p class="_ctxstxt_helpdesk"></p>');`
-`$('.customAuthTop').html('<p class="_ctxstxt_capslock"</p>');`
-`// we select the div with the text, which is hidden by default`
-`var warningtext = document.querySelector(".customAuthTop");`
-`// we listen on each keypress`
-`document.addEventListener("keyup", function(event) {`
-`// is capslock on?`
-`var caps = event.getModifierState && event.getModifierState('CapsLock');`
- `if (caps === true) {`
-`// show text`
-`warningtext.style.display="block";`
- `} else {`
-`// hide text`
-`warningtext.style.display="none";`
- `}`
-`});`
+```
+$('.customAuthBottom').html('<p class="_ctxstxt_sspr"></p>');
+$('.customAuthFooter').html('<p class="_ctxstxt_helpdesk"></p>');
+$('.customAuthTop').html('<p class="_ctxstxt_capslock"</p>');
+// we select the div with the text, which is hidden by default
+var warningtext = document.querySelector(".customAuthTop");
+// we listen on each keypress
+document.addEventListener("keyup", function(event) {
+// is capslock on?
+var caps = event.getModifierState && event.getModifierState('CapsLock');
+ if (caps === true) {
+// show text
+warningtext.style.display="block";
+ } else {
+// hide text
+warningtext.style.display="none";
+ }
+});
+```
 
 
 
@@ -148,11 +150,13 @@ Example:
 Add to strings.en.json: "waitMessage":"Please press Approve in your Authenticator app .."
 
 In our scenario, we added this:
-`{"waitMessage":"Please press Approve in your Authenticator app ..",`
-`"Epa_Pre_Reqm_Msg":"Checking if the device is a <company> PC.. If it's not a <company> PC, press Skip Check.",`
-`"helpdesk":"Contact <company> IT Support: itsupport@company.com / +1 123456789",`
-`"sspr":"Has your password expired, or have you forgotten it?<br><a class='ssprlink' href='https://aka.ms/sspr'>Reset your password here</a>"`
-`}`
+```
+{"waitMessage":"Please press Approve in your Authenticator app ..",
+"Epa_Pre_Reqm_Msg":"Checking if the device is a <company> PC.. If it's not a <company> PC, press Skip Check.",
+"helpdesk":"Contact <company> IT Support: itsupport@company.com / +1 123456789",
+"sspr":"Has your password expired, or have you forgotten it?<br><a class='ssprlink' href='https://aka.ms/sspr'>Reset your password here</a>"
+}
+```
 
 
 ## RfWebUi – Plugins.xml
@@ -171,34 +175,36 @@ Go nuts with CSS. We didn't bother that hard, so we copy-pasted from the interne
 A.sspr: A is the \<a> tag, sspr is the class name. The possible options are link, visited, hover and active. Link is yellow normally, becomes red when hovering over.
 
 theme.css:
-`.customAuthBottom {`
-`color:white;`
-`height:30px;`
-`font-size:14px;`
-`width:80%;`
-`margin:0 auto;`
-`padding-left:180px;`
-`padding-top:50px;`
-`text-align: center;`
-`}`
+```
+.customAuthBottom {
+color:white;
+height:30px;
+font-size:14px;
+width:80%;
+margin:0 auto;
+padding-left:180px;
+padding-top:50px;
+text-align: center;
+}
 
-`.customAuthFooter {`
-`position: absolute;`
-`bottom: 5px;`
-`height: 30px;`
-`font-size: 12px;`
-`color: white;`
-`font-weight: bold;`
-`text-align: center;`
-`width: 100%;`
-`background-color: black;`
-`padding-top: 5px;`
-`}`
+.customAuthFooter {
+position: absolute;
+bottom: 5px;
+height: 30px;
+font-size: 12px;
+color: white;
+font-weight: bold;
+text-align: center;
+width: 100%;
+background-color: black;
+padding-top: 5px;
+}
 
-`a.ssprlink:link, a.ssprlink:visited {`
-   `color: yellow;`
-`}`
+a.ssprlink:link, a.ssprlink:visited {
+   color: yellow;
+}
 
-`a.ssprlink:hover, a.ssprlink:active {`
-   `color: red;`
-`}`
+a.ssprlink:hover, a.ssprlink:active {
+   color: red;
+}
+```
