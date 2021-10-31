@@ -35,7 +35,7 @@ Our theme will be located in /var/netscaler/logon/themes/RfWebUi/.
 
 
 ## Enhanced Authentication Feedback
-File: **/var/netscaler/logon/LogonPoint/receiver/js/ctxs.core.min.js**
+File: **/var/netscaler/logon/LogonPoint/receiver/js/ctxs.core.min.js**</br>
 References: [https://www.jgspiers.com/netscaler-enhanced-authentication-feedback/](https://www.jgspiers.com/netscaler-enhanced-authentication-feedback/)
 
 By default, Gateway will simply return a "Incorrect user name or password" message on any authentication failure, regardless if it's actually incorrect username or password, or if the password's expired, or account disabled, etc.
@@ -140,7 +140,7 @@ warningtext.style.display="none";
 
 
 ## RfWebUi – Custom strings (ctxs.strings.json + strings.en.json)
-File: **/var/netscaler/logon/LogonPoint/receiver/js/localization/en/ctxs.strings.json**
+File: **/var/netscaler/logon/LogonPoint/receiver/js/localization/en/ctxs.strings.json**</br>
 File: **/var/netscaler/logon/themes/\<themename>/strings.en.json**
 
 **ctxs.strings.json** is the file listing all builtin strings. These can be changed with the strings.\<locale>.json file in the theme folder. We will be using strings.en.json for this example.
@@ -164,8 +164,8 @@ File: **/var/netscaler/logon/themes/RfWebUI/Plugins.xml**
 plugins.xml == web.config on StoreFront 3.0.
 
 For our scenario, we wanted the Desktops tab to be shown by default, instead of the Favorites tab.
-BEFORE: defaultView="apps"
-AFTER: defaultView="desktops"
+- BEFORE: `defaultView="apps"`
+- AFTER:  `defaultView="desktops"`
 
 
 ## RfWebUi – theme.css
