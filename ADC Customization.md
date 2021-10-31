@@ -3,12 +3,13 @@
 In this blog post, I'll show you some customizations for nFactor using the RfWebUi  theme on the ADC. Some basic, some more advanced.
 
 Let it be known that I am not impressed with Citrix documentation on this subject. I have some bones to pick, such as:
-	• The nFactor tooling itself is confusing
-	• The nFactor documentation is even worse
-	• Citrix Support articles written outside of docs.citrix.com are always of extremely poor quality
-	• The community has had to carry Citrix because of this
-	• The community cannot grow because Citrix hides ADC behind a paywall (trial is time-limited and VPX10 developer license requires a paid ADC license)
-	• A lot of RfWebUi customizations are variations of StoreFront customizations, and it's unclear how these map to RfWebUi on the ADC
+- The nFactor tooling itself is confusing
+- The nFactor documentation is even worse
+- Citrix Support articles written outside of docs.citrix.com are always of extremely poor quality
+- The community has had to carry Citrix because of this
+- The community cannot grow because Citrix hides ADC behind a paywall (trial is time-limited and VPX10 developer license requires a paid ADC license)
+- A lot of RfWebUi customizations are variations of StoreFront customizations, and it's unclear how these map to RfWebUi on the ADC
+
 Because of some of these points, community solutions are often out of date or misleading.
 
 
