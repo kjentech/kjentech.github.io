@@ -3,12 +3,13 @@
 In this blog post, I'll show you some customizations for nFactor using the RfWebUi  theme on the ADC. Some basic, some more advanced.
 
 Let it be known that I am not impressed with Citrix documentation on this subject. I have some bones to pick, such as:
-	• The nFactor tooling itself is confusing
-	• The nFactor documentation is even worse
-	• Citrix Support articles written outside of docs.citrix.com are always of extremely poor quality
-	• The community has had to carry Citrix because of this
-	• The community cannot grow because Citrix hides ADC behind a paywall (trial is time-limited and VPX10 developer license requires a paid ADC license)
-	• A lot of RfWebUi customizations are variations of StoreFront customizations, and it's unclear how these map to RfWebUi on the ADC
+- The nFactor tooling itself is confusing
+- The nFactor documentation is even worse
+- Citrix Support articles written outside of docs.citrix.com are always of extremely poor quality
+- The community has had to carry Citrix because of this
+- The community cannot grow because Citrix hides ADC behind a paywall (trial is time-limited and VPX10 developer license requires a paid ADC license)
+- A lot of RfWebUi customizations are variations of StoreFront customizations, and it's unclear how these map to RfWebUi on the ADC
+
 Because of some of these points, community solutions are often out of date or misleading.
 
 
@@ -35,7 +36,7 @@ Our theme will be located in /var/netscaler/logon/themes/RfWebUi/.
 
 
 ## Enhanced Authentication Feedback
-File: **/var/netscaler/logon/LogonPoint/receiver/js/ctxs.core.min.js**
+File: **/var/netscaler/logon/LogonPoint/receiver/js/ctxs.core.min.js**</br>
 References: [https://www.jgspiers.com/netscaler-enhanced-authentication-feedback/](https://www.jgspiers.com/netscaler-enhanced-authentication-feedback/)
 
 By default, Gateway will simply return a "Incorrect user name or password" message on any authentication failure, regardless if it's actually incorrect username or password, or if the password's expired, or account disabled, etc.
@@ -48,14 +49,14 @@ We enabled Enhanced Authentication Feedback for messages such as "Account Locked
 
 For our scenario, we edited these:
 
-BEFORE: "errorMessageLabel4009":"User not found"
-AFTER: "errorMessageLabel4009":"Incorrect user name or password"
+- BEFORE: `"errorMessageLabel4009":"User not found"`
+- AFTER:  `"errorMessageLabel4009":"Incorrect user name or password"`
 
-This is also possible on X1:
-/var/netscaler/logon/themes/\<themename\>/resources/en.xml
+This is also possible on X1:</br>
+/var/netscaler/logon/themes/THEMENAME/resources/en.xml
 
-BEFORE:  \<String id="errorMessageLabel4009">User not found\</String\>
-AFTER:  \<String id="errorMessageLabel4009">Incorrect user name or password.</String\>
+- BEFORE: `<String id="errorMessageLabel4009">User not found</String>`
+- AFTER:  `<String id="errorMessageLabel4009">Incorrect user name or password.</String>`
 
 
 
@@ -73,7 +74,7 @@ A thing that is not very clear on the official docs, is that many StoreFront 3.0
 
 I would like to give a shoutout to some very helpful blog posts, articles and websites.
 
-- [Citrix Customization Cookbook | Citrix Blogs](https://www.citrix.com/blogs/2015/08/25/citrix-customization-cookbook/): The first article anyone tweaking RfWebUi should read
+- [Citrix Customization Cookbook (Citrix Blogs)](https://www.citrix.com/blogs/2015/08/25/citrix-customization-cookbook/): The first article anyone tweaking RfWebUi should read
 - [Adding Text, Links and Other Elements to the NetScaler Logon Page - Part 2 (mycugc.org)](https://www.mycugc.org/blogs/cugc-blogs/2016/12/15/adding-text-links-and-other-elements-to-the-netsca): It's not perfect - it actually kept me hanging for days because the author does not explain their environment. Me and some others set up a responder policy for it to get 0 hits because the binding is in the incorrect place, because our vServer design is different.
 - [nFactor Extensibility (citrix.com)](https://docs.citrix.com/en-us/citrix-adc/current-release/aaa-tm/authentication-methods/multi-factor-nfactor-authentication/nfactor-extensibility.html): Goes into great detail on Login Schemas
 - [Citrix Synergy TV - SYN229 - nFactor and Login Schemas... - YouTube](https://www.youtube.com/watch?v=dQRJo1Dm_Aw): Also goes into great detail on Login Schemas
@@ -140,7 +141,7 @@ warningtext.style.display="none";
 
 
 ## RfWebUi – Custom strings (ctxs.strings.json + strings.en.json)
-File: **/var/netscaler/logon/LogonPoint/receiver/js/localization/en/ctxs.strings.json**
+File: **/var/netscaler/logon/LogonPoint/receiver/js/localization/en/ctxs.strings.json**</br>
 File: **/var/netscaler/logon/themes/\<themename>/strings.en.json**
 
 **ctxs.strings.json** is the file listing all builtin strings. These can be changed with the strings.\<locale>.json file in the theme folder. We will be using strings.en.json for this example.
@@ -160,12 +161,12 @@ In our scenario, we added this:
 
 
 ## RfWebUi – Plugins.xml
-File: /var/netscaler/logon/themes/RfWebUI/Plugins.xml
+File: **/var/netscaler/logon/themes/RfWebUI/Plugins.xml**
 plugins.xml == web.config on StoreFront 3.0.
 
 For our scenario, we wanted the Desktops tab to be shown by default, instead of the Favorites tab.
-BEFORE: defaultView="apps"
-AFTER: defaultView="desktops"
+- BEFORE: `defaultView="apps"`
+- AFTER:  `defaultView="desktops"`
 
 
 ## RfWebUi – theme.css
