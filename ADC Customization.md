@@ -48,14 +48,14 @@ We enabled Enhanced Authentication Feedback for messages such as "Account Locked
 
 For our scenario, we edited these:
 
-BEFORE: "errorMessageLabel4009":"User not found"
-AFTER: "errorMessageLabel4009":"Incorrect user name or password"
+BEFORE: `"errorMessageLabel4009":"User not found"`
+AFTER:  `"errorMessageLabel4009":"Incorrect user name or password"`
 
 This is also possible on X1:
-/var/netscaler/logon/themes/\<themename\>/resources/en.xml
+/var/netscaler/logon/themes/THEMENAME/resources/en.xml
 
-BEFORE:  \<String id="errorMessageLabel4009">User not found\</String\>
-AFTER:  \<String id="errorMessageLabel4009">Incorrect user name or password.</String\>
+BEFORE: `<String id="errorMessageLabel4009">User not found</String>`
+AFTER:  `<String id="errorMessageLabel4009">Incorrect user name or password.</String>`
 
 
 
@@ -160,7 +160,7 @@ In our scenario, we added this:
 
 
 ## RfWebUi – Plugins.xml
-File: /var/netscaler/logon/themes/RfWebUI/Plugins.xml
+File: **/var/netscaler/logon/themes/RfWebUI/Plugins.xml**
 plugins.xml == web.config on StoreFront 3.0.
 
 For our scenario, we wanted the Desktops tab to be shown by default, instead of the Favorites tab.
