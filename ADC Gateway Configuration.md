@@ -1,12 +1,16 @@
----
-tags: [small]
----
-
-Tags: [[4b-Citrix ADC]]
+This ADC config will give you:
+- ADC Gateway
+- LDAP + RADIUS MFA
+	- in this example, both SMS and push notifications are supported
+	- If configured (see [ADC Customizations](ADC Customization.md)), push notification users will get a message asking them to check their app
+- RDP Proxy
+	- with and without SSO, example can be seen under Traffic Policies
 
 Internal IP 10.10.10.10 is NATed to external IP x.x.x.x
 If these configuration steps are done from top to bottom, you have the complete setup.
 replace "domain.com" with your domain.
+
+Visual customizations: See [ADC Customizations](ADC Customization.md).
 
 ### RDP Client profiles
 RDP Client Profile: rd_client_noextras
@@ -218,11 +222,17 @@ Content Switching vServer: http-https_redirector
 - Responder Policy: http_to_https_pol
 
 
+### Bookmarks
+Add bookmarks as needed.
+- Address: rdp://RdServer.domain.com
+- Use Gateway as reverse proxy: YES
+
+
 
 ## Customizations
 Portal Theme: CUSTOM-RfWebUI
 
-Customizations: See [ADC Customizations](4b1-ADC Customization.md).
+Customizations: See [ADC Customizations](ADC Customization.md).
 
 Examples include:
 - Enhanced Authentication Feedback
