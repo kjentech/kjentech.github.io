@@ -1,9 +1,6 @@
-# Heading 1
-This is my first GitHub Pages repo.
+I'll publish some articles here.
 
-## Heading 2
-I will put stuff up here.
+## Citrix ADC
+[ADC Customization](ADC Customization.md)
 
-Markdown link: [ADC Customization](ADC Customization.md)
-
-Wikilink: [[ADC Customization]]
+[ADC Gateway Configuration](ADC Gateway Configuration.md)
