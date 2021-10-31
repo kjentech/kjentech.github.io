@@ -73,7 +73,7 @@ A thing that is not very clear on the official docs, is that many StoreFront 3.0
 
 I would like to give a shoutout to some very helpful blog posts, articles and websites.
 
-- [Citrix Customization Cookbook | Citrix Blogs](https://www.citrix.com/blogs/2015/08/25/citrix-customization-cookbook/): The first article anyone tweaking RfWebUi should read
+- [Citrix Customization Cookbook (Citrix Blogs)](https://www.citrix.com/blogs/2015/08/25/citrix-customization-cookbook/): The first article anyone tweaking RfWebUi should read
 - [Adding Text, Links and Other Elements to the NetScaler Logon Page - Part 2 (mycugc.org)](https://www.mycugc.org/blogs/cugc-blogs/2016/12/15/adding-text-links-and-other-elements-to-the-netsca): It's not perfect - it actually kept me hanging for days because the author does not explain their environment. Me and some others set up a responder policy for it to get 0 hits because the binding is in the incorrect place, because our vServer design is different.
 - [nFactor Extensibility (citrix.com)](https://docs.citrix.com/en-us/citrix-adc/current-release/aaa-tm/authentication-methods/multi-factor-nfactor-authentication/nfactor-extensibility.html): Goes into great detail on Login Schemas
 - [Citrix Synergy TV - SYN229 - nFactor and Login Schemas... - YouTube](https://www.youtube.com/watch?v=dQRJo1Dm_Aw): Also goes into great detail on Login Schemas
